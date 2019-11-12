@@ -94,6 +94,7 @@ body {
 .show-cart {
   width: 18rem;
   padding: 2rem 1.5rem;
+  /* animation for cart */
   transform: rotateY(-360deg);
 }
 .cart-item {
