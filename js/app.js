@@ -1,4 +1,4 @@
-// show the card
+// show the card by
 
 (function () {
     const cartInfo = document.getElementById('cart-info');
@@ -29,23 +29,43 @@
                 // </div>
                 //get the img for the cart in small size
                 let fullPath = event.target.parentElement.previousElementSibling.src;
+
+
+                // console.log(event.target);
+
+
+
+
+
                 let pos = fullPath.indexOf("img") + 3;
                 // get doughnut-1.jpeg instaid the img/doughnut-1.jpeg
                 let partPath = fullPath.slice(pos);
                 // setup object placing in the cart
                 const item = {};
                 item.img = `img-cart${partPath}`;
-                let name = event.target.parentElement.parentElement.nextElementSibling.
-                children[0].children[0].textContent;
+
+
+                let name = event.target.parentElement.parentElement.nextElementSibling.children[0].children[0].textContent;
+
+
+
+
                 let price = event.target.parentElement.parentElement.nextElementSibling.
                 children[0].children[1].textContent;
                 // take off $ and space in price
                 let finalPrice = price.slice(1).trim();
                 item.price = finalPrice;
 
+
+
+
+
                 const cartItem = document.createElement("div");
                 cartItem.classList.add("cart-item", "d-flex", "justify-content-between",
                     "text-capitalize", "my-3");
+
+
+
 
                 cartItem.innerHTML = `
                 <img src="${item.img}" class="img-fluid rounded-circle" id="item-img" alt="">
@@ -59,6 +79,9 @@
             </a>
             </div>
                 `;
+
+
+
                 //select cart
                 const cart = document.getElementById('cart');
                 const total = document.querySelector('.cart-total-container');
