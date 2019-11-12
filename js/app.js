@@ -66,7 +66,7 @@
                 alert(
                     event.target.parentElement.parentElement.nextElementSibling.children[0].children[0].textContent +
                     " added in the cart");
-//showTotals
+                //showTotals
                 showTotal();
 
             }
@@ -74,9 +74,8 @@
     });
 
     //showTotals
-    function showTotal()
-    {
-// creating an array of all prices, then loop the prices
+    function showTotal() {
+        // creating an array of all prices, then loop the prices
         const total = [];
         const items = document.querySelectorAll(".cart-item-price");
 
@@ -84,8 +83,7 @@
             total.push(parseFloat(item.textContent));
         });
 
-        const totalMoney = total.reduce (function(total, item)
-        {
+        const totalMoney = total.reduce(function (total, item) {
             total += item;
             return total;
         }, 0);
